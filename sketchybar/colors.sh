@@ -1,26 +1,55 @@
 #!/usr/bin/env sh
 
-# Color Palette
-BLACK=0xff181926
-WHITE=0xffcad3f5
-RED=0xffed8796
-GREEN=0xffa6da95
-BLUE=0xff8aadf4
-YELLOW=0xffeed49f
-ORANGE=0xfff5a97f
-MAGENTA=0xffc6a0f6
-GREY=0xff939ab7
+# Catppuccin Mocha Color Palette (Omarchy-style)
+BASE=0xff1e1e2e
+MANTLE=0xff181825
+CRUST=0xff11111b
+SURFACE0=0xff313244
+SURFACE1=0xff45475a
+SURFACE2=0xff585b70
+OVERLAY0=0xff6c7086
+OVERLAY1=0xff7f849c
+OVERLAY2=0xff9399b2
+TEXT=0xffcdd6f4
+SUBTEXT1=0xffbac2de
+SUBTEXT0=0xffa6adc8
+
+# Colors
+LAVENDER=0xffb4befe
+BLUE=0xff89b4fa
+SAPPHIRE=0xff74c7ec
+SKY=0xff89dceb
+TEAL=0xff94e2d5
+GREEN=0xffa6e3a1
+YELLOW=0xfff9e2af
+PEACH=0xfffab387
+MAROON=0xffeba0ac
+RED=0xfff38ba8
+MAUVE=0xffcba6f7
+PINK=0xfff5c2e7
+FLAMINGO=0xfff2cdcd
+ROSEWATER=0xfff5e0dc
+
 TRANSPARENT=0x00000000
 
-# General bar colors
-BAR_COLOR=0xcc24273a #$GREY # Grey bar
-ICON_COLOR=$WHITE # Color of all icons
-LABEL_COLOR=$WHITE # Color of all labels
+# Omarchy-style bar colors
+BAR_COLOR=0xd01e1e2e         # Semi-transparent base
+MODULE_BG=0xff313244         # Surface0 for module backgrounds
+MODULE_BG_FOCUSED=0xff45475a # Surface1 for focused/active items
 
-POPUP_BACKGROUND_COLOR=$BLACK
-POPUP_BORDER_COLOR=$WHITE
+ICON_COLOR=$TEXT
+LABEL_COLOR=$TEXT
 
-SHADOW_COLOR=$BLACK
+POPUP_BACKGROUND_COLOR=$SURFACE0
+POPUP_BORDER_COLOR=$LAVENDER
+
+SHADOW_COLOR=$CRUST
 
 # Item specific special colors
 SPOTIFY_GREEN=$GREEN
+WORKSPACE_ACTIVE=$LAVENDER
+WORKSPACE_INACTIVE=$SUBTEXT0
+BATTERY_CHARGING=$GREEN
+BATTERY_LOW=$RED
+VOLUME_COLOR=$BLUE
+WIFI_COLOR=$SKY

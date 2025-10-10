@@ -1,20 +1,15 @@
 #!/usr/bin/env sh
 
-# Source colors
+# Omarchy-style clock plugin
+
 source "$HOME/.config/sketchybar/colors.sh"
 
-# Get current time and date formatted for vertical layout
+# Get current time and date
 TIME=$(date '+%H:%M')
-DATE_COMPACT=$(date '+%d/%m')
+DATE=$(date '+%a %d %b')
 
-# Update the clock item with time (stacked vertically)
+# Update the clock item with combined date and time
 sketchybar --set clock \
-           label="$TIME" \
-           icon.color=$WHITE \
-           label.color=$WHITE
-
-# Update the date item with compact date (DD/MM)
-sketchybar --set date \
-           label="$DATE_COMPACT" \
-           icon.color=$WHITE \
-           label.color=$WHITE
+           label="$DATE $TIME" \
+           icon.color=$TEXT \
+           label.color=$TEXT
