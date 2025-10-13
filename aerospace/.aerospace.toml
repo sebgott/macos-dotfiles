@@ -76,7 +76,11 @@ inner.horizontal = 20
 inner.vertical =   20
 outer.left =       20
 outer.bottom =     20
-outer.top =        40
+outer.top = [
+  { monitor.'^Built-in*' = 20 },
+  { monitor.'^Hp*'               = 40 },
+  40  # default
+]
 outer.right =      20
 
 # 'main' binding mode declaration
