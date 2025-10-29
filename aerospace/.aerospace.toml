@@ -78,7 +78,6 @@ outer.left =       20
 outer.bottom =     20
 outer.top = [
   { monitor.'^Built-in*' = 20 },
-  { monitor.'^Hp*'               = 40 },
   40  # default
 ]
 outer.right =      20
