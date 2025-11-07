@@ -8,7 +8,8 @@ source "$HOME/.config/sketchybar/icons.sh"  # Loads all defined icons
 ITEM_DIR="$HOME/.config/sketchybar/items"     # Directory where the items are configured
 PLUGIN_DIR="$HOME/.config/sketchybar/plugins" # Directory where all the plugin scripts are stored
 
-FONT="SF Pro"                                                 # Needs to have Regular, Bold, Semibold, Heavy and Black variants
+FONT="SF Pro"                                                 # Label font
+ICON_FONT="JetBrainsMono Nerd Font"                           # Icon font (for Nerd Font glyphs)
 SPACE_CLICK_SCRIPT="yabai -m space --focus \$SID 2>/dev/null" # The script that is run for clicking on space components
 
 PADDINGS=8 # Omarchy uses more generous padding
@@ -33,7 +34,7 @@ sketchybar --bar height=35 \
   blur_radius=20 \
   \
   --default updates=when_shown \
-  icon.font="$FONT:Semibold:9.0" \
+  icon.font="$ICON_FONT:Semibold:11.0" \
   icon.color=$ICON_COLOR \
   icon.padding_left=$MODULE_PADDING \
   icon.padding_right=$MODULE_PADDING \
