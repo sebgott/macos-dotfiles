@@ -47,17 +47,17 @@ automatically-unhide-macos-hidden-apps = true
 # check-further-callbacks = true
 # run = ['layout floating', 'move-node-to-workspace S']  # The callback itself
 
-[[on-window-detected]]
-if.app-name-regex-substring = 'finder'
-run = 'layout floating'
- 
-[[on-window-detected]]
-if.app-name-regex-substring = 'camera'
-run = 'layout floating'
-
-[[on-window-detected]]
-if.app-name-regex-substring = 'discord'
-run = 'layout floating'
+# [[on-window-detected]]
+# if.app-name-regex-substring = 'finder'
+# run = 'layout floating'
+#
+# [[on-window-detected]]
+# if.app-name-regex-substring = 'camera'
+# run = 'layout floating'
+#
+# [[on-window-detected]]
+# if.app-name-regex-substring = 'discord'
+# run = 'layout floating'
 
 # Possible values: (qwerty|dvorak)
 # See https://nikitabobko.github.io/AeroSpace/guide#key-mapping
@@ -153,6 +153,7 @@ alt-shift-minus = 'resize smart -50'
 alt-shift-equal = 'resize smart +50'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace
+alt-b = 'workspace B'
 alt-1 = 'workspace 1'
 alt-2 = 'workspace 2'
 alt-3 = 'workspace 3'
