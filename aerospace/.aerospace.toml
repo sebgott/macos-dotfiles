@@ -153,10 +153,11 @@ alt-shift-minus = 'resize smart -50'
 alt-shift-equal = 'resize smart +50'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace
-alt-e = 'workspace E'
-alt-b = 'workspace B'
-alt-q = 'workspace Q'
-alt-m = 'workspace M'
+alt-e = 'workspace E' # Editor
+alt-b = 'workspace B' # Browser
+alt-q = 'workspace Q' # Terminal
+alt-m = 'workspace M' # Music
+alt-s = 'workspace S' # Social
 alt-1 = 'workspace 1'
 alt-2 = 'workspace 2'
 alt-3 = 'workspace 3'
@@ -168,6 +169,7 @@ alt-shift-e = 'move-node-to-workspace E --focus-follows-window'
 alt-shift-b = 'move-node-to-workspace B --focus-follows-window'
 alt-shift-q = 'move-node-to-workspace Q --focus-follows-window'
 alt-shift-m = 'move-node-to-workspace M --focus-follows-window'
+alt-shift-s = 'move-node-to-workspace S --focus-follows-window'
 alt-shift-1 = 'move-node-to-workspace 1 --focus-follows-window'
 alt-shift-2 = 'move-node-to-workspace 2 --focus-follows-window'
 alt-shift-3 = 'move-node-to-workspace 3 --focus-follows-window'
@@ -182,7 +184,7 @@ alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
 alt-enter = 'exec-and-forget open -n /Applications/Ghostty.app'
 alt-f = 'exec-and-forget open -a Finder'
 shift-cmd-b = 'exec-and-forget -n "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"'
-alt-shift-s = 'exec-and-forget open -a "Lightshot Screenshot"'
+alt-shift-p = 'exec-and-forget open -a "Lightshot Screenshot"'
 
 # 'service' binding mode declaration.
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
