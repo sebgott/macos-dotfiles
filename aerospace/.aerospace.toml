@@ -57,7 +57,7 @@ automatically-unhide-macos-hidden-apps = true
 #
 # [[on-window-detected]]
 # if.app-name-regex-substring = 'discord'
-# run = 'layout floating'
+# run = 'layout ndinfloating'
 
 # Possible values: (qwerty|dvorak)
 # See https://nikitabobko.github.io/AeroSpace/guide#key-mapping
@@ -120,6 +120,8 @@ outer.right = [
 #     activate
 # end tell'
 # '''
+
+alt-shift-c = "exec-and-forget ~/.config/aerospace/scripts/aerospace-cleanup.sh"
 
 alt-ctrl-shift-f = 'fullscreen'
 # alt-ctrl-f = 'layout floating tiling'
