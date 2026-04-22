@@ -7,7 +7,8 @@ source "$HOME/.config/sketchybar/colors.sh"
 WORKSPACE_ID="$1"
 
 # Get the currently focused workspace from Aerospace
-FOCUSED_WORKSPACE=$(aerospace list-workspaces --focused 2>/dev/null)
+AEROSPACE_BIN="/opt/homebrew/bin/aerospace"
+FOCUSED_WORKSPACE=$("$AEROSPACE_BIN" list-workspaces --focused 2>/dev/null)
 
 # Determine if this workspace is focused
 if [ "$WORKSPACE_ID" = "$FOCUSED_WORKSPACE" ]; then
