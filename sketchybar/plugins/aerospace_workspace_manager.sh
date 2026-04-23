@@ -53,3 +53,28 @@ for item_name in $(sketchybar --query bar | jq -r '.items[] | select(startswith(
   fi
 done
 
+# Keep workspace items ordered as:
+# 1) numeric IDs ascending
+# 2) alphabetical IDs ascending
+ORDERED_SPACE_ITEMS="$(
+  sketchybar --query bar \
+    | jq -r '.items[] | select(startswith("space."))' \
+    | awk '
+      {
+        id = substr($0, 7)
+        if (id ~ /^[0-9]+$/) {
+          printf("0\t%020d\t%s\n", id + 0, $0)
+        } else {
+          printf("1\t%s\t%s\n", toupper(id), $0)
+        }
+      }
+    ' \
+    | sort -t "$(printf '\t')" -k1,1 -k2,2 \
+    | awk -F "$(printf '\t')" '{print $3}'
+)"
+
+if [ -n "$ORDERED_SPACE_ITEMS" ]; then
+  # shellcheck disable=SC2086
+  sketchybar --reorder $ORDERED_SPACE_ITEMS
+fi
+
