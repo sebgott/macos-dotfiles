@@ -4,7 +4,7 @@
 
 sketchybar --add item battery right \
   --set battery \
-  update_freq=30 \
+  update_freq=120 \
   script="$PLUGIN_DIR/battery.sh" \
   icon.font="$FONT:Bold:14.0" \
   icon.color=$TEXT \

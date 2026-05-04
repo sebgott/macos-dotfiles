@@ -4,7 +4,7 @@
 
 sketchybar --add item clock right \
   --set clock \
-  update_freq=10 \
+  update_freq=30 \
   script="$PLUGIN_DIR/clock.sh" \
   icon="󰥔" \
   icon.font="$FONT:Bold:15.0" \

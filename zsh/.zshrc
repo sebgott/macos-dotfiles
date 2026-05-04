@@ -8,8 +8,6 @@ export ZSH="$HOME/.oh-my-zsh"
 
 alias python='/usr/local/bin/python3'
 
-export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
-
 for file in ~/.zshrc.d/*.zsh; do
   source "$file"
 done

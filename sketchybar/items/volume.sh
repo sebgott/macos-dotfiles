@@ -4,7 +4,6 @@
 
 sketchybar --add item volume right \
   --set volume \
-  update_freq=5 \
   script="$PLUGIN_DIR/volume.sh" \
   icon.font="$FONT:Bold:14.0" \
   icon.color=$VOLUME_COLOR \

@@ -36,9 +36,7 @@ if ! sketchybar --query "$ITEM" >/dev/null 2>&1; then
     script="$PLUGIN_DIR/aerospacer.sh $FOCUSED_WORKSPACE"
 fi
 
-# Keep only "used" workspaces in the bar:
-# - non-empty workspaces
-# - plus the currently focused workspace
+# Keep only "used" workspaces in the bar and reorder them
 KEEP_WORKSPACES="$(
   {
     "$AEROSPACE_BIN" list-workspaces --monitor all --empty no
@@ -46,16 +44,15 @@ KEEP_WORKSPACES="$(
   } 2>/dev/null | sort -u
 )"
 
-for item_name in $(sketchybar --query bar | jq -r '.items[] | select(startswith("space."))'); do
+BAR_ITEMS="$(sketchybar --query bar | jq -r '.items[] | select(startswith("space."))')"
+
+for item_name in $BAR_ITEMS; do
   workspace_id="${item_name#space.}"
   if ! printf '%s\n' "$KEEP_WORKSPACES" | grep -Fxq "$workspace_id"; then
     sketchybar --remove "$item_name" >/dev/null 2>&1 || true
   fi
 done
 
-# Keep workspace items ordered as:
-# 1) numeric IDs ascending
-# 2) alphabetical IDs ascending
 ORDERED_SPACE_ITEMS="$(
   sketchybar --query bar \
     | jq -r '.items[] | select(startswith("space."))' \

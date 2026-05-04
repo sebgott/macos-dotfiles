@@ -6,19 +6,7 @@ WIFI_CONNECTED="󰤨"
 WIFI_DISCONNECTED="󰤯"
 
 is_connected_to_internet() {
-  if ! route get default &>/dev/null 2>&1; then
-    return 1
-  fi
-  
-  if ping -c 1 -t 1 8.8.8.8 &>/dev/null 2>&1; then
-    return 0
-  fi
-  
-  if nslookup google.com &>/dev/null 2>&1; then
-    return 0
-  fi
-  
-  return 1
+  route get default &>/dev/null 2>&1
 }
 
 is_wifi_on() {
