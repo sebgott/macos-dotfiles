@@ -110,7 +110,7 @@ alias rizzlers='kubectl get pods -n'
 alias fanumtax='kubectl scale'
 alias tf=terraform
 alias gcm='git commit -m'
-alias podman=docker
+alias lg=lazygit
 
 KIND_EXPERIMENTAL_PROVIDER=podman
 
