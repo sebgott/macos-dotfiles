@@ -80,8 +80,8 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 # asdf configuration
-. "$HOME/.asdf/asdf.sh"
-. "$HOME/.asdf/completions/asdf.bash"
+[ -f "$HOME/.asdf/asdf.sh" ] && . "$HOME/.asdf/asdf.sh"
+[ -f "$HOME/.asdf/completions/asdf.bash" ] && . "$HOME/.asdf/completions/asdf.bash"
 
 # User configuration
 
@@ -135,3 +135,12 @@ code() {
   fi
 }
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+
+# Auto-start/attach tmux for interactive Ghostty sessions launched via AeroSpace's
+# alt-enter keybind. Skips VS Code's integrated terminal and nested tmux sessions.
+if command -v tmux &>/dev/null \
+  && [ -z "$TMUX" ] \
+  && [ -n "$PS1" ] \
+  && [ "$TERM_PROGRAM" = "ghostty" ]; then
+  tmux attach -t main 2>/dev/null || tmux new -s main
+fi

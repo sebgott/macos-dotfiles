@@ -1,10 +1,10 @@
 # Theme
-theme = Catpuccin Mocha
+theme = catppucin-mocha.conf
 
 # Font
 font-family = "CaskaydiaMono Nerd Font"
 font-style = Regular
-font-size = 9
+font-size = 15
 
 # Window
 window-padding-x = 14
